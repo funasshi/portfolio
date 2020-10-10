@@ -13,13 +13,22 @@ a{
   text-decoration: none;
   color:black;
 }
+
+a:hover{
+  color:#ddd;
+  transition: 0.4s ;
+}
+
 /* ヘッダ */
 header{
   font-size: 0px;
   /* background-color: red; */
-  margin:100px 15% 50px 15%;
 }
 
+header h1{
+  margin-bottom: 70px;
+  /* background-color: red; */
+}
 h1 {
   font-family: "Bodoni 72 Smallcaps", Didot, "Didot LT STD", "Hoefler Text", Garamond, "Times New Roman", serif;
   font-size: 24px;
@@ -30,12 +39,39 @@ h1 {
 
 header h1{
   display: inline-block;
-  width: 75%;
 }
 
 h1 span{
   font-size: 34px;
 }
+
+header h1 a:hover{
+  color:black;
+}
+
+
+@media screen and (min-width: 961px){
+header{
+  margin:100px 15% 50px 15%;
+}
+header h1{
+  width: 70%;
+}
+}
+
+@media screen and (max-width: 960px){
+header{
+  margin:100px 8% 50px 8%;
+  text-align: center;
+}
+
+header h1{
+  width:100%;
+}
+}
+
+
+
 
 
 ul {
@@ -55,29 +91,60 @@ header .sns li{
   padding-right: 20px;
 }
 
+header .menu-container{
+  margin-top:70px;
+  text-align: center;
+  /* background-color: yellow; */
+}
+
 header .menu{
+  display: inline-block;
   /* background-color:blue; */
   font-size: 0;
   text-align: center;
-  margin-top:150px;
+  width:80%;
 }
+
+header .menu ul{
+  font-size: 0;
+  /* background-color: green; */
+  display: inline-block;
+}
+
 header .menu li{
   display: inline-block;
   /* background-color: pink; */
-  margin-right: 50px;
-  margin-left: 50px;
   text-align: center;
   font-size: 26px;
   font-family: "Bodoni 72 Oldstyle";
   letter-spacing: 9px;
 }
 
-header .menu a {
+@media screen and (min-width: 961px){
+  header .menu li{
+    width:25%;
+  }
+}
+
+@media screen and (max-width: 960px){
+  header .menu li{
+    width:50%;
+  }
+}
+
+@media screen and (max-width: 560px){
+  header .menu li{
+    width:100%;
+  }
+}
+
+
+.menu a {
   position: relative;
   display: inline-block;
 }
 
-header .menu a::after {
+.menu a::after {
   position: absolute;
   bottom: -4px;
   left: 0;
@@ -89,20 +156,35 @@ header .menu a::after {
   transform-origin: right top;
   transition: transform .3s;
 }
-header .menu a:hover::after {
+.menu a:hover::after {
   transform-origin: left top;
   transform: scale(1, 1);
 }
 
 /* メイン */
-.top-img{
-  width:100%;
-  margin-bottom:150px;
+
+@media screen and (min-width: 961px){
+  .top-img{
+    width:70%;
+    margin:0 15% 150px 15%;
+  }
+
+  .main-container{
+    margin:0 15% 0 15%;
+    /* background-color: red; */
+  }
 }
 
-.main-container{
-  margin:0 15% 0 15%;
-  /* background-color: red; */
+@media screen and (max-width: 960px){
+  .top-img{
+    width:100%;
+    margin-bottom:150px;
+  }
+
+  .main-container{
+    margin:0 20px 0 20px;
+    /* background-color: red; */
+  }
 }
 
 .main-container h2{
@@ -123,13 +205,53 @@ header .menu a:hover::after {
 
 
 
-.main-container .content{
+.content{
   /* background-color: pink; */
   margin-bottom:80px;
 }
 
+.content ul{
+  /* background-color: lightgreen; */
+}
 
+.content p{
+  /* margin-bottom: 20px; */
+  display: inline-block;
+  vertical-align: middle;
+}
 
+.content img{
+  vertical-align: middle;
+}
+
+@media screen and (min-width: 961px){
+  .content-with-img img{
+    /* background-color: red; */
+    display: inline-block;
+    width:30%;
+  }
+  .content-with-img .article{
+    /* background-color: blue; */
+    display: inline-block;
+    margin-left: 10%;
+    width:60%;
+    vertical-align: middle;
+  }
+}
+@media screen and (max-width: 960px){
+  .content-with-img img{
+    /* background-color: red; */
+    display: inline-block;
+    width:60%;
+    margin-right: 20%;
+    margin-left: 20%;
+    margin-bottom:50px;
+  }
+  .content-with-img .article{
+    /* background-color: blue; */
+    display: inline-block;
+  }
+}
 
 
 
@@ -143,7 +265,6 @@ footer{
 }
 
 footer .container{
-  width: 80%;
   display: inline-block;
   /* background-color: blue; */
 }
@@ -151,7 +272,6 @@ footer .container{
 
 footer .sns{
   margin-top: 80px;
-  margin-left: 80px;
   text-align: center;
   /* background-color: pink; */
   display: inline-block;
@@ -163,12 +283,15 @@ footer .sns li{
   margin-right: 20px;
 }
 
+footer{
+  margin-bottom:80px;
+}
+
 footer .menu{
   /* background-color:blue; */
   font-size: 0;
   text-align: center;
   display: inline-block;
-  margin-bottom:100px;
 
 }
 footer .menu li{
@@ -178,7 +301,6 @@ footer .menu li{
   font-size: 20px;
   font-family: "Bodoni 72 Oldstyle";
   letter-spacing: 5px;
-  margin-left:20px;
 }
 
 .copyright{
@@ -188,10 +310,76 @@ footer .menu li{
   text-align: center;
   display: inline-block;
   /* background-color: green; */
-  width: 20%;
-
 }
 
+@media screen and (min-width: 961px){
+  footer .container{
+    width:75%
+  }
+  footer .sns{
+    width: 30%;
+    text-align: center;
+  }
+
+  footer .menu{
+    width:70%;
+  }
+
+  footer .menu li{
+    width :120px;
+  }
+  .copyright{
+    width:25%;
+  }
+
+}
+@media screen and (max-width: 960px){
+  footer .container{
+    text-align: center;
+    width:100%;
+  }
+  footer .sns{
+    width: 100%;
+  }
+  footer .menu{
+    width: 100%;
+    text-align: center;
+    margin-top: 50px;
+
+  }
+  footer .menu li{
+    width: 100%;
+  }
+
+  .copyright{
+    margin-top: 50px;
+    width:100%;
+  }
+}
+
+@media screen and (max-width: 460px){
+  footer .container{
+    text-align: center;
+    width:100%;
+  }
+  footer .sns{
+    width: 100%;
+  }
+  footer .menu{
+    width: 100%;
+    text-align: center;
+    margin-top: 100px;
+
+  }
+  footer .menu li{
+    width: 100%;
+  }
+
+  .copyright{
+    margin-top: 100px;
+    width:100%;
+  }
+}
 
 
 
@@ -206,25 +394,19 @@ h3{
   font-size: 22px;
   font-family: "Bodoni 72 Oldstyle";
   letter-spacing: 4px;
+  margin-bottom: 40px;
 }
 
-.about img{
+/* .main-container img{
   width:20%;
   display: inline-block;
-}
+  vertical-align: middle;
+} */
 
-.about ul{
-  /* background-color: lightgreen; */
-  display: inline-block;
-}
 
-.educational-background{
-  /* background-color: green; */
-  display: inline-block;
-  vertical-align: top;
-  width:70%;
-  margin-left: 10%;
-}
+
+
+
 
 /* contact */
 .contact-content{
@@ -254,12 +436,6 @@ h3{
   margin-left:50px;
 }
 
-.works-content img{
-  width:20%;
-  display: inline-block;
-  /* background-color: green; */
-  vertical-align: middle;
-}
 
 .works-content{
   margin-bottom: 100px;
@@ -267,28 +443,7 @@ h3{
 }
 
 
-.works-content p{
-  /* background-color: blue; */
-  display: inline-block;
-  width:50%;
-  margin-left:15%;
-  vertical-align: middle;
-
-}
-.selfPR p{
-  margin-bottom: 20px;
-}
 
 .Hobby a{
   border-bottom: 1px solid;
-}
-
-.Hobby a:hover{
-  color:#ddd;
-  transition: 0.4s ;
-}
-
-.about-me a:hover{
-  color:#ddd;
-  transition: 0.4s ;
 }
