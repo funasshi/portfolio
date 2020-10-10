@@ -379,6 +379,8 @@ footer .menu li{
     margin-top: 100px;
     width:100%;
   }
+
+
 }
 
 
@@ -439,7 +441,7 @@ h3{
   text-align: left;
 }
 
-@media screen and (max-width: 460px){
+@media screen and (max-width: 560px){
   .contact-content i{
     width: 100%;
     margin-bottom: 20px;
@@ -449,7 +451,10 @@ h3{
     margin-left: 0;
     text-align: center;
   }
-  .contact-content
+  .contact-content p{
+    font-size: 16px;
+    margin:0;
+  }
 }
 
 .works-content{
