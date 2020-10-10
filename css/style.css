@@ -132,7 +132,7 @@ header .menu li{
   }
 }
 
-@media screen and (max-width: 560px){
+@media screen and (max-width: 460px){
   header .menu li{
     width:100%;
   }
@@ -420,22 +420,37 @@ h3{
   font-size: 80px;
   /* background-color: blue; */
   vertical-align: middle;
-
 }
 
 .contact-content p{
   /* background-color: red; */
   display: inline-block;
   vertical-align: middle;
-  margin-left: 100px;
+  margin-left: 10%;
   font-size: 22px;
 }
 
 .mail,.twitter{
+  /* background-color: yellow; */
+  width:90%;
+  margin-left: 10%;
   margin-bottom: 70px;
-  margin-left:50px;
+  display: inline-block;
+  text-align: left;
 }
 
+@media screen and (max-width: 460px){
+  .contact-content i{
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  .mail,.twitter{
+    width: 100%;
+    margin-left: 0;
+    text-align: center;
+  }
+  .contact-content
+}
 
 .works-content{
   margin-bottom: 100px;
